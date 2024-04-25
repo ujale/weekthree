@@ -1,0 +1,28 @@
+{
+  "signUpPage": {
+    "signupButton": ".Header2_header__nav_icon__0ZP2y"
+  },
+  "basicDetailsPage": {
+    "fullnameField": "#fullname",
+    "businessnameField": "#businessname",
+    "businessEmailField": "[name='businessemail']",
+    "businessPhoneNumberField": "#businessphonenumber",
+    "businessRegNumberField": "#businessRegNum",
+    "nextBtn": "button[type='button']"
+  },
+  "otherDetailsPage":{
+    "WebField": "#website",
+    "igField": "#instagramHandle",
+    "xField": "#twitterHandle",
+    "heardAboutUs": "div[placeholder]",
+    "igOption":"div#scrollableDiv > div:nth-of-type(3)",
+    "fbOption":"div#scrollableDiv > div:nth-of-type(4)",
+    "xOption":"div#scrollableDiv > div:nth-of-type(5)",
+    "passwordField": "input#password",
+    "emailField": "input#email"
+  },
+  "otpPage":{
+    "inputBox":"input",
+    "otpMessage":".onboarding_text__center__FzKte"
+  }
+}
