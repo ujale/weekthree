@@ -67,3 +67,5 @@ Cypress.Commands.add('Login', () => {
     cy.clickSpecifiedElement('Welcome back')
     cy.clickSpecifiedElement('Select a Plan')
 })
+
+// just to retest
