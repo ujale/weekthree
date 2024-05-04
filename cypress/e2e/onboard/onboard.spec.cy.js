@@ -26,61 +26,72 @@ Given(/^I click "([^"]*)" button$/, (element) => {
 // 	cy.typeAText(basic.fullnameField,'Osman Shire');
 // });
 
+// method 2
 When(/^I fill in the "([^"]*)" with data "([^"]*)"$/, (args1,args2) => {
 	cy.fillDetails(args1,args2);
 });
 
 
-When(/^I fill in the business name$/, () => {
-	cy.typeAText(basic.businessnameField, 'Eniola');
-});
+// When(/^I fill in the business name$/, () => {
+// 	cy.typeAText(basic.businessnameField, 'Eniola');
+// });
 
 When(/^I insert the business email$/, () => {
 	cy.insertEmail();
 });
 
 When(/^I insert a unique phone number$/, () => {
-	return true;
+	cy.get(basic.businessPhoneNumberField).fill(faker.phone.number('+23480########'))
+	//cy.typeAText(basic.businessPhoneNumberField, "faker.phone.number('+23480########')")
+
 });
 
-When(/^I fill in the business registration number$/, () => {
-	return true;
+// When(/^I fill in the business registration number$/, () => {
+// 	cy.typeAText(basic.businessRegNumberField,'RC-0987');
+// 	//cy.fillDetails(args1,args2);
+// });
+
+// When(/^I click Next button$/, () => {
+// 	cy.clickSpecifiedElement(element)
+// });
+
+
+When(/^I select "([^"]*)" as how I heard about Mima$/, (text) => {
+	cy.heardAboutUs(text);
 });
 
-When(/^I click Next button$/, () => {
-	return true;
-});
-
-
-
-When(/^I select Instagram as how I heard about Mima$/, () => {
-	return true;
-});
-
-When(/^I fill in the password$/, () => {
-	return true;
-});
+// When(/^I fill in the password$/, () => {
+// 	cy.get(other.passwordField).fill('Test1234@')
+// });
 
 When(/^I click Sign Up button$/, () => {
-	return true;
+	cy.clickSpecifiedElement(element)
 });
 
 Then(/^I should see the OTP page$/, () => {
-	return true;
+	cy.verifyOtpPage();
 });
 
 When(/^I insert the OTP$/, () => {
-	return true;
-});
-
-Then(/^I should see the dashboard$/, () => {
-	return true;
+	cy.insertOTP();
 });
 
 
-When(/^I fill in the "([^"]*)"$/, (args1) => {
-	cy.insertDetails(args1)
+Then(/^I should see the following on the dashboard$/, (datatable) => {
+	datatable.hashes().forEach((row) => {
+		cy.contains(row.Sidebar).should('exist').and('contain', row.Sidebar)
+	});
 });
+// Then(/^I should see the dashboard$/, () => {
+// 	cy.clickSpecifiedElement('Welcome back');
+//     //cy.clickSpecifiedElement('Select a Plan');
+// });
+
+
+// When(/^I fill in the "([^"]*)"$/, (args1) => {
+// 	cy.insertDetails(args1)
+// });
+
 
 
 
