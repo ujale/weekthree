@@ -15,6 +15,7 @@
     "igField": "#instagramHandle",
     "xField": "#twitterHandle",
     "heardAboutUs": "div[placeholder]",
+    "aboutUsList": "#scrollableDiv",
     "igOption":"div#scrollableDiv > div:nth-of-type(3)",
     "fbOption":"div#scrollableDiv > div:nth-of-type(4)",
     "xOption":"div#scrollableDiv > div:nth-of-type(5)",
@@ -22,6 +23,7 @@
     "emailField": "input#email"
   },
   "otpPage":{
+    "otpVerification":".Onboarding_right__t5ZjT p:nth-child(2)",
     "inputBox":"input",
     "otpMessage":".onboarding_text__center__FzKte"
   }

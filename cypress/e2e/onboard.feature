@@ -2,7 +2,7 @@ Feature: SignUp Journey
 
     As a new user, I should be able to signup successfully
 
-    Scenario: Successful registration with valid credentials
+    Scenario Outline: Successful registration with valid credentials choosing <option>.
         Given I click "Sign up" button
         When I fill in the "fullname" with data "Mercy Ayegbeni"
         And I fill in the "businessname" with data "Mercy"
